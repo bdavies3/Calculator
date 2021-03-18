@@ -7,7 +7,7 @@ class MyTestCase(unittest.TestCase):
         self.calculator = Calculator()
 
     def test_instantiate_calculator(self):
-        calculator = Calculator()
+        calculator = Calculator
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_results_property_calculator(self):
@@ -23,6 +23,7 @@ class MyTestCase(unittest.TestCase):
        calculator = Calculator()
        self.assertEqual(calculator.subtract(2, 2), 0)
        self.assertEqual(calculator.result, 0)
+
 
 if __name__ == '__main__':
    unittest.main()
