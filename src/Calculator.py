@@ -20,7 +20,7 @@ def mean(data):
     return mean
 
 
-def multiplication(a, b):
+def multiplication(a, b) -> object:
     c = float(a) * float(b)
     return c
 
@@ -37,6 +37,10 @@ class Calculator:
 
     def subtract(self, a, b):
         self.result = subtraction(a, b)
+        return self.result
+
+    def mean(self, a, b):
+        self.result = mean(a, b)
         return self.result
 
     def divide(self, a, b):
