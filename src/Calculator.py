@@ -13,11 +13,17 @@ def subtraction(a, b):
 
 
 def division(a, b):
-    return a / b
+    return float(a) / float(b)
+
 
 def mean(data):
     mean = data
     return mean
+
+
+def multiplication(a, b):
+    c = float(a) * float(b)
+    return c
 
 
 class Calculator:
@@ -36,6 +42,10 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def multiply(self, a, b):
+        self.result = multiplication(a, b)
         return self.result
 
 
