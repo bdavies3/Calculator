@@ -1,13 +1,23 @@
+from CsvReader import CsvReader
+
+
+
 def addition(a, b):
-    return a + b
+    c = a + b
+    return c
 
 
 def subtraction(a, b):
-    return a - b
+    c = b - a
+    return c
 
 
 def division(a, b):
     return a / b
+
+def mean(data):
+    mean = data
+    return mean
 
 
 class Calculator:
@@ -27,3 +37,14 @@ class Calculator:
     def divide(self, a, b):
         self.result = division(a, b)
         return self.result
+
+
+class CSVStats(Calculator):
+    data = []
+
+    def __init__(self, data_file):
+        self.data = CsvReader(data_file)
+        pass
+
+    def mean(self):
+        mean(self.data)
