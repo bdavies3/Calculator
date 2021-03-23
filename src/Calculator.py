@@ -25,6 +25,11 @@ def multiplication(a, b) -> object:
     return c
 
 
+def squared(a, b) -> object:
+    c = a ^ b
+    return c
+
+
 class Calculator:
     result = 0
 
@@ -50,6 +55,11 @@ class Calculator:
     def multiply(self, a, b):
         self.result = multiplication(a, b)
         return self.result
+
+    def squared(self, a, b):
+        self.result = squared(a, b)
+        return self.result
+
 
 
 class CSVStats(Calculator):
