@@ -39,6 +39,18 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.multiply(2, 5), 10)
         self.assertEqual(calculator.result, 10)
 
+    def test_squared_method_calculator(self):
+        test_data = CsvReader('/src/Unit Test Square.csv')
+        calculator = Calculator()
+        self.assertEqual(calculator.multiply(2, 2), 4)
+        self.assertEqual(calculator.result, 4)
+
+    def test_multiply_method_calculator(self):
+        test_data = CsvReader('/src/Unit Test Square Root.csv')
+        calculator = Calculator()
+        self.assertEqual(calculator.multiply(25, 2), 50)
+        self.assertEqual(calculator.result, 50)
+
 
 
 
