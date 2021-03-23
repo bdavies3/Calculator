@@ -29,8 +29,10 @@ def squared(a, b) -> object:
     c = a ** b
     return c
 
+
 def square_root(a, b) -> object:
     b = math.sqrt(a)
+    return b
 
 
 class Calculator:
