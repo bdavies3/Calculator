@@ -1,5 +1,5 @@
 from CsvReader import CsvReader
-
+import math
 
 def addition(a, b):
     c = a + b
@@ -26,8 +26,11 @@ def multiplication(a, b) -> object:
 
 
 def squared(a, b) -> object:
-    c = a ^ b
+    c = a ** b
     return c
+
+def square_root(a, b) -> object:
+    b = math.sqrt(a)
 
 
 class Calculator:
@@ -59,6 +62,11 @@ class Calculator:
     def squared(self, a, b):
         self.result = squared(a, b)
         return self.result
+
+    def square_root(self, a, b):
+        self.result = square_root(a, b)
+        return self.result
+
 
 
 
